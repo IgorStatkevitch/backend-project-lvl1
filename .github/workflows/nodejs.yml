@@ -1,10 +1,9 @@
 # Name of workflow
-name: Node CI
+name: CI
 
 # Trigger the workflow on push or pull request
 on:
   - push
-  - pull_request
 
 jobs:
   build:
@@ -21,6 +20,7 @@ jobs:
         # Check-out repository under GitHub workspace
         # https://github.com/actions/checkout
       - uses: actions/checkout@v2
+        
         # Step's name
       - name: Use Node.js ${{ matrix.node-version }}
         # Configures the node version used on GitHub-hosted runners
@@ -29,6 +29,17 @@ jobs:
         # The Node.js version to configure
         with:
           node-version: ${{ matrix.node-version }}
+        
+      - name: cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ./node\_modules
+          key: ${{ runner.OS }}-dependencies-${{ hashFiles('\*\*/package-lock.json') }}
+          restore-keys: |
+           ${{ runner.OS }}-dependencies-${{ env.cache-name }}-
+           ${{ runner.OS }}-dependencies-
+           ${{ runner.OS }}-
+          
       - name: npm install
         # Install project
         run: |
@@ -36,10 +47,12 @@ jobs:
         # Add environment variables
         env:
           CI: true
+          
       - name: Run linter
         # Run Linter
         run: |
           make lint
+          
       - name: Test & publish code coverage
         # Publish code coverage on Code Climate
         # https://github.com/paambaati/codeclimate-action
