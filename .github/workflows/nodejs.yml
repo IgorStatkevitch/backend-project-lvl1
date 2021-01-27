@@ -29,16 +29,6 @@ jobs:
         # The Node.js version to configure
         with:
           node-version: ${{ matrix.node-version }}
-        
-      - name: cache dependencies
-        uses: actions/cache@v1
-        with:
-          path: ./node\_modules
-          key: ${{ runner.OS }}-dependencies-${{ hashFiles('\*\*/package-lock.json') }}
-          restore-keys: |
-           ${{ runner.OS }}-dependencies-${{ env.cache-name }}-
-           ${{ runner.OS }}-dependencies-
-           ${{ runner.OS }}-
           
       - name: npm install
         # Install project
