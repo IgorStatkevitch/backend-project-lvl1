@@ -12,6 +12,7 @@ const brainCalc = () => {
   const question = `What is the result of the expression?\nQuestion: ${a} ${operator} ${b}\nYour Answer: `;
   const userAnswer = readlineSync.question(question);
   let answer = 0;
+
   switch (opIndex) {
     case 0:
       answer = a + b;

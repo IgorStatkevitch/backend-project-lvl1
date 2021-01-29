@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import '../bin/brain-calc.js';
 
 const name = readlineSync.question(
   'Welcome to the Brain Games!\nMay I have your name? ',
