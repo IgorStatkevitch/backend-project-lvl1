@@ -8,8 +8,9 @@ const brainCalc = () => {
   const operators = ['+', '-', '*'];
   const opIndex = Math.floor(Math.random() * operators.length);
   const operator = operators[opIndex];
-  const question = `What is the result of the expression?\nQuestion: ${a} ${operator} ${b}\nYour Answer: `;
-  const userAnswer = readlineSync.question(question);
+  const userAnswer = readlineSync.question(
+    `What is the result of the expression?\nQuestion: ${a} ${operator} ${b}\nYour Answer: `,
+  );
   let answer = 0;
 
   switch (opIndex) {
