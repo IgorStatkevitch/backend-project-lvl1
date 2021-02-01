@@ -24,6 +24,7 @@ const brainCalc = () => {
       answer = a * b;
       break;
     default:
+      answer = 0;
   }
 
   return {
