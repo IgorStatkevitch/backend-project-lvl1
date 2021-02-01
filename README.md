@@ -9,3 +9,5 @@ Here you can watch how it works:
 https://asciinema.org/a/nGLRztnGBwpBDVZALUmZaX9ld
 * brain-calc
 https://asciinema.org/a/uWxMhlf6V9eKnpfbTj8LQ8Peq
+* brain-gcd
+https://asciinema.org/a/2eNyzxKHjjGQkn5mhIqeZafeK
