@@ -12,7 +12,6 @@ const brainCalc = () => {
     `What is the result of the expression?\nQuestion: ${a} ${operator} ${b}\nYour Answer: `,
   );
   let answer = 0;
-
   switch (opIndex) {
     case 0:
       answer = a + b;
