@@ -1,6 +1,6 @@
-#!/usr/bin/env node
+#!/usr/bin/games/env node
 import readlineSync from 'readline-sync';
-import * as index from '../src/index.js';
+import * as index from '../../src/index.js';
 
 const brainCalc = () => {
   const a = index.getRandomNum();
