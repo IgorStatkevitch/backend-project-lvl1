@@ -9,7 +9,7 @@ const wrongAnswer = (userAnswer, answer) => {
   console.log(
     `'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`,
   );
-  console.log(`Let's try again, ${name}`);
+  console.log(`Let's try again, ${name}!`);
 };
 
 const startGame = (game) => {
@@ -26,7 +26,7 @@ const startGame = (game) => {
     }
   }
   if (score === 3) {
-    console.log(`Congratulations, ${name}`);
+    console.log(`Congratulations, ${name}!`);
   }
 };
 export default startGame;
