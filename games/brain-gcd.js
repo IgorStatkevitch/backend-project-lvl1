@@ -7,19 +7,20 @@ console.log('Find the greatest common divisor of given numbers.');
 const brainGcd = () => {
   const a = getRandomNum(0, 50);
   const b = getRandomNum(0, 50);
-  const task = `${a} ${b}`;
-  const userAnswer = readlineSync.question(`Question: ${task}\nYour answer: `);
+  const userAnswer = readlineSync.question(
+    `Question: ${a} ${b}\nYour answer: `,
+  );
 
   const findDivisor = (num1, num2) => {
-    const result = [];
-    for (let i = 0; i <= num1; i += 1) {
-      for (let j = 0; j <= num2; j += 1) {
-        if (num1 % i === 0 && num2 % j === 0 && i === j) {
-          result.push(i);
-        }
-      }
+    let x = Math.abs(num1);
+    let y = Math.abs(num2);
+
+    while (y) {
+      const t = y;
+      y = x % y;
+      x = t;
     }
-    return result.length === 0 ? 0 : result[result.length - 1];
+    return x;
   };
 
   const answer = findDivisor(a, b);
