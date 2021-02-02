@@ -5,8 +5,8 @@
 [![Actions Status](https://github.com/IgorStatkevitch/backend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/IgorStatkevitch/backend-project-lvl1/actions)
 
 
-[![asciicast](https://asciinema.org/a/Eum8ZaUFsUVdtDUhdAH4NLyAM.svg)](https://asciinema.org/a/Eum8ZaUFsUVdtDUhdAH4NLyAM)
 ## Игра: "Проверка на четность"
+[![asciicast](https://asciinema.org/a/Eum8ZaUFsUVdtDUhdAH4NLyAM.svg)](https://asciinema.org/a/Eum8ZaUFsUVdtDUhdAH4NLyAM)
 
 Задача игрока - ответить 'yes', если число четное, и 'no', если число нечетное
 
@@ -15,8 +15,8 @@
 $ brain-even
 ```
 
-[![asciicast](https://asciinema.org/a/2JTeYYZZDD7kXzxLyHtXdaUz1.svg)](https://asciinema.org/a/2JTeYYZZDD7kXzxLyHtXdaUz1)
 ## Игра: "Калькулятор"
+[![asciicast](https://asciinema.org/a/2JTeYYZZDD7kXzxLyHtXdaUz1.svg)](https://asciinema.org/a/2JTeYYZZDD7kXzxLyHtXdaUz1)
 
 Задача игрока - верно вычислить случайное математическое выражение и записать ответ
 
@@ -25,8 +25,8 @@ $ brain-even
 $ brain-calc
 ```
 
-[![asciicast](https://asciinema.org/a/erpHQW1nKQTPVrYuUd5i2avrA.svg)](https://asciinema.org/a/erpHQW1nKQTPVrYuUd5i2avrA)
 ## Игра: "Наибольший общий делитель"
+[![asciicast](https://asciinema.org/a/erpHQW1nKQTPVrYuUd5i2avrA.svg)](https://asciinema.org/a/erpHQW1nKQTPVrYuUd5i2avrA)
 
 Задача игрока - верно вычислить наибольший общий делитель и записать ответ
 
@@ -35,8 +35,8 @@ $ brain-calc
 $ brain-gcd
 ```
 
-[![asciicast](https://asciinema.org/a/48DHRUCyqLaXF1UmIQPbnKRaP.svg)](https://asciinema.org/a/48DHRUCyqLaXF1UmIQPbnKRaP)
 ## Игра: "Арифметическая прогрессия"
+[![asciicast](https://asciinema.org/a/48DHRUCyqLaXF1UmIQPbnKRaP.svg)](https://asciinema.org/a/48DHRUCyqLaXF1UmIQPbnKRaP)
 
 Задача игрока - найти недостающее звено арифметической прогрессии
 
