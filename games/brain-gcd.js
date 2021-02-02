@@ -7,9 +7,8 @@ console.log('Find the greatest common divisor of given numbers.');
 const brainGcd = () => {
   const a = getRandomNum(0, 50);
   const b = getRandomNum(0, 50);
-  const userAnswer = readlineSync.question(
-    `Question: ${a} ${b}\nYour answer: `,
-  );
+  const task = `${a} ${b}`;
+  const userAnswer = readlineSync.question(`Question: ${task}\nYour answer: `);
 
   const findDivisor = (num1, num2) => {
     const result = [];
