@@ -3,11 +3,11 @@ import startGame from '../src/index.js';
 import getRandomNum from '../src/utils.js';
 
 console.log('What is the result of the expression?');
-const a = getRandomNum(0, 50);
-const b = getRandomNum(0, 50);
-const opIndex = getRandomNum(0, 2);
 
 const brainCalc = () => {
+  const a = getRandomNum(0, 50);
+  const b = getRandomNum(0, 50);
+  const opIndex = getRandomNum(0, 2);
   let answer = 0;
   let task;
   switch (opIndex) {
@@ -27,10 +27,6 @@ const brainCalc = () => {
       break;
   }
   const userAnswer = readlineSync.question(`Question: ${task}\nYour Answer: `);
-  return {
-    answer,
-    userAnswer,
-    roundScore: +userAnswer === answer ? 1 : 0,
-  };
+  return { answer, userAnswer, roundScore: +userAnswer === answer ? 1 : 0 };
 };
 export default () => startGame(brainCalc);
