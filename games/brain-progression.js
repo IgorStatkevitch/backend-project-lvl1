@@ -13,9 +13,9 @@ const brainProgression = () => {
 
   for (let i = 1; i <= length; i += 1) {
     if (i === missingIndex) {
-      task = `${task} ..`;
+      task = `${task} .. `;
     } else {
-      task = `${task} ${start + step * i}`;
+      task = `${task} ${start + step * i} `;
     }
   }
   const userAnswer = readlineSync.question(`Question: ${task}\nYour answer: `);
