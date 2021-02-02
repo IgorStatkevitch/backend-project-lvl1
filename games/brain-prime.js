@@ -18,7 +18,7 @@ const brainPrime = () => {
   return {
     answer,
     userAnswer,
-    roundScore: userAnswer.toLowerCase() === answer.toLowerCase() ? 1 : 0,
+    roundScore: userAnswer.toLowerCase() === answer.toLowerCase(),
   };
 };
 export default () => startGame(brainPrime);

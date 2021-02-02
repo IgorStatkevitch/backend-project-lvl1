@@ -28,7 +28,7 @@ const brainGcd = () => {
   return {
     answer,
     userAnswer,
-    roundScore: +userAnswer === answer ? 1 : 0,
+    roundScore: +userAnswer === answer,
   };
 };
 export default () => startGame(brainGcd);

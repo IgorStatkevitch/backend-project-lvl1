@@ -27,6 +27,6 @@ const brainCalc = () => {
       break;
   }
   const userAnswer = readlineSync.question(`Question: ${task}\nYour Answer: `);
-  return { answer, userAnswer, roundScore: +userAnswer === answer ? 1 : 0 };
+  return { answer, userAnswer, roundScore: +userAnswer === answer };
 };
 export default () => startGame(brainCalc);
