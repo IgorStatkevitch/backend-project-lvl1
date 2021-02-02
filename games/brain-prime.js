@@ -9,9 +9,7 @@ const brainPrime = () => {
   const userAnswer = readlineSync.question(`Question: ${x}\nYour answer: `);
   const isPrime = (num) => {
     for (let i = 2; i < num; i += 1) {
-      if (num % i === 0) {
-        return false;
-      }
+      if (num % i === 0) return false;
     }
     return num > 1;
   };
