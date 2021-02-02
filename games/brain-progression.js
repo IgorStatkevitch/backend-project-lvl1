@@ -19,12 +19,12 @@ const brainProgression = () => {
     }
   }
   const userAnswer = readlineSync.question(`Question: ${task}\nYour answer: `);
-  const answer = start + step * missingIndex;
+  const answer = `${start + step * missingIndex}`;
 
   return {
     answer,
     userAnswer,
-    roundScore: +userAnswer === answer,
+    roundScore: userAnswer.toLowerCase() === answer.toLowerCase(),
   };
 };
 
