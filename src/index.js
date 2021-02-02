@@ -5,8 +5,6 @@ const name = readlineSync.question(
 );
 console.log(`Hello, ${name}!`);
 
-const getRandomNum = () => Math.floor(Math.random() * 50);
-
 const wrongAnswer = (userAnswer, answer) => {
   console.log(
     `'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.`,
@@ -31,4 +29,4 @@ const startGame = (game) => {
     console.log(`Congratulations, ${name}`);
   }
 };
-export { startGame, getRandomNum, wrongAnswer };
+export default startGame;

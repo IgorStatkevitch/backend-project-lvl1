@@ -1,12 +1,14 @@
-#!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import * as index from '../src/index.js';
+import startGame from '../src/index.js';
+import getRandomNum from '../src/utils.js';
+
+console.log('Find the greatest common divisor of given numbers.');
 
 const brainGcd = () => {
-  const a = index.getRandomNum();
-  const b = index.getRandomNum();
+  const a = getRandomNum(0, 50);
+  const b = getRandomNum(0, 50);
   const userAnswer = readlineSync.question(
-    `Find the greatest common divisor of given numbers.\nQuestion: ${a} ${b}\nYour answer: `,
+    `Question: ${a} ${b}\nYour answer: `,
   );
 
   const findDivisor = (num1, num2) => {
@@ -29,4 +31,4 @@ const brainGcd = () => {
     roundScore: +userAnswer === answer ? 1 : 0,
   };
 };
-index.startGame(brainGcd);
+export default () => startGame(brainGcd);

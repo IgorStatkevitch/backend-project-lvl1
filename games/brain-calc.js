@@ -1,30 +1,33 @@
-#!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import * as index from '../src/index.js';
+import startGame from '../src/index.js';
+import getRandomNum from '../src/utils.js';
+
+console.log('What is the result of the expression?');
 
 const brainCalc = () => {
-  const a = index.getRandomNum();
-  const b = index.getRandomNum();
-  const operators = ['+', '-', '*'];
-  const opIndex = Math.floor(Math.random() * operators.length);
-  const operator = operators[opIndex];
-  const userAnswer = readlineSync.question(
-    `What is the result of the expression?\nQuestion: ${a} ${operator} ${b}\nYour Answer: `,
-  );
+  const a = getRandomNum(0, 50);
+  const b = getRandomNum(0, 50);
+  const opIndex = getRandomNum(0, 2);
+
   let answer = 0;
+  let task;
   switch (opIndex) {
     case 0:
       answer = a + b;
+      task = `${a} + ${b}`;
       break;
     case 1:
       answer = a - b;
+      task = `${a} - ${b}`;
       break;
     case 2:
       answer = a * b;
+      task = `${a} * ${b}`;
       break;
     default:
-      answer = 0;
+      break;
   }
+  const userAnswer = readlineSync.question(`Question: ${task}\nYour Answer: `);
 
   return {
     answer,
@@ -32,4 +35,4 @@ const brainCalc = () => {
     roundScore: +userAnswer === answer ? 1 : 0,
   };
 };
-index.startGame(brainCalc);
+export default () => startGame(brainCalc);
