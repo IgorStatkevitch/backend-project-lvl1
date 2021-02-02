@@ -44,3 +44,13 @@ $ brain-gcd
 ```sh
 $ brain-progression
 ```
+
+## Игра: "Простое ли число?"
+[![asciicast](https://asciinema.org/a/qAufCnVTErpGrYXqdDbJXfIV6.svg)](https://asciinema.org/a/qAufCnVTErpGrYXqdDbJXfIV6)
+
+Задача игрока - ответить 'yes', если число простое, 'no' - если нет
+
+### Запуск игры
+```sh
+$ brain-prime
+```
