@@ -15,7 +15,7 @@ const brainPrime = () => {
     }
     return num > 1;
   };
-  const answer = isPrime(x) === true ? 'yes' : 'no';
+  const answer = isPrime(x) ? 'yes' : 'no';
 
   return {
     answer,
